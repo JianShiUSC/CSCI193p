@@ -41,10 +41,13 @@
                             <constraint firstItem="1kE-lb-4z0" firstAttribute="bottom" secondItem="VDR-rl-BBs" secondAttribute="top" id="uAl-f9-dlj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="1kE-lb-4z0" id="WoM-nF-TlT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zA-c0-MIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="-136"/>
+            <point key="canvasLocation" x="103" y="-294"/>
         </scene>
     </scenes>
 </document>
