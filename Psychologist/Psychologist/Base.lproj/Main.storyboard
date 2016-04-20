@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1575" y="398"/>
         </scene>
-        <!--Happiness View Controller-->
+        <!--Diagnosed Happiness View Controller-->
         <scene sceneID="R3z-Q2-8Fc">
             <objects>
-                <viewController id="8oR-hr-ryD" customClass="HappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8oR-hr-ryD" customClass="DiagnosedHappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gbl-Db-dW8"/>
                         <viewControllerLayoutGuide type="bottom" id="izc-iK-jNh"/>
@@ -154,7 +154,15 @@
                             <constraint firstItem="vYI-X1-mhE" firstAttribute="top" secondItem="9Fy-U8-it2" secondAttribute="top" id="z7w-cA-eEe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kPK-nA-SMO"/>
+                    <navigationItem key="navigationItem" id="kPK-nA-SMO">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="jE8-i3-dEy">
+                            <connections>
+                                <segue destination="Vgj-le-LRm" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="jE8-i3-dEy" id="NlU-mu-CpP">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="vYI-X1-mhE" id="MdN-5D-pmO"/>
                     </connections>
@@ -167,6 +175,26 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1575" y="1178"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="cDz-QO-ibc">
+            <objects>
+                <viewController id="Vgj-le-LRm" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <textView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" id="rLy-pM-RUP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <connections>
+                        <outlet property="textView" destination="rLy-pM-RUP" id="Ivz-df-tyu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHY-zy-G49" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313" y="1178"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="tIn-le-VNn">

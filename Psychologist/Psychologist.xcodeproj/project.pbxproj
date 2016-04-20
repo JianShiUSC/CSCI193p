@@ -16,6 +16,8 @@
 		20AEDB991CC60C320009ECF5 /* PsychologistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDB981CC60C320009ECF5 /* PsychologistUITests.swift */; };
 		20AEDBA91CC611E20009ECF5 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDBA71CC611E20009ECF5 /* HappinessViewController.swift */; };
 		20AEDBAA1CC611E20009ECF5 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDBA81CC611E20009ECF5 /* FaceView.swift */; };
+		20AEDBAC1CC702A80009ECF5 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDBAB1CC702A80009ECF5 /* TextViewController.swift */; };
+		20AEDBAE1CC7054F0009ECF5 /* DiagnosedHappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDBAD1CC7054F0009ECF5 /* DiagnosedHappinessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		20AEDB9A1CC60C320009ECF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20AEDBA71CC611E20009ECF5 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
 		20AEDBA81CC611E20009ECF5 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		20AEDBAB1CC702A80009ECF5 /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		20AEDBAD1CC7054F0009ECF5 /* DiagnosedHappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnosedHappinessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				20AEDBA71CC611E20009ECF5 /* HappinessViewController.swift */,
 				20AEDBA81CC611E20009ECF5 /* FaceView.swift */,
 				20AEDB7C1CC60C320009ECF5 /* Main.storyboard */,
+				20AEDBAD1CC7054F0009ECF5 /* DiagnosedHappinessViewController.swift */,
+				20AEDBAB1CC702A80009ECF5 /* TextViewController.swift */,
 				20AEDBA61CC60C580009ECF5 /* Supporting Files */,
 			);
 			path = Psychologist;
@@ -273,8 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20AEDBAC1CC702A80009ECF5 /* TextViewController.swift in Sources */,
 				20AEDB7B1CC60C320009ECF5 /* PsychologistViewController.swift in Sources */,
 				20AEDBA91CC611E20009ECF5 /* HappinessViewController.swift in Sources */,
+				20AEDBAE1CC7054F0009ECF5 /* DiagnosedHappinessViewController.swift in Sources */,
 				20AEDB791CC60C320009ECF5 /* AppDelegate.swift in Sources */,
 				20AEDBAA1CC611E20009ECF5 /* FaceView.swift in Sources */,
 			);
