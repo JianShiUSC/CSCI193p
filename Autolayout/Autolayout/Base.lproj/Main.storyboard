@@ -43,6 +43,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY5-WM-QAI">
                                 <rect key="frame" x="199" y="104" width="114" height="30"/>
                                 <state key="normal" title="Change Security"/>
+                                <connections>
+                                    <action selector="toggleSecurity" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GC-J7-nsi"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RZZ-Oo-0uS">
                                 <rect key="frame" x="20" y="115" width="128" height="19"/>
@@ -82,6 +85,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="rlB-61-scY" secondAttribute="trailing" id="vgB-hf-Nw6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginField" destination="rlB-61-scY" id="WxM-X0-tfy"/>
+                        <outlet property="passwordField" destination="gRO-PT-j5o" id="b6X-BZ-EtD"/>
+                        <outlet property="passwordLabel" destination="xQg-35-Uzf" id="yhH-El-rHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
