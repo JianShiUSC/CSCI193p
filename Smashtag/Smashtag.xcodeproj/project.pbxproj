@@ -18,6 +18,7 @@
 		20AEDC6E1CC995EA0009ECF5 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDC6A1CC995EA0009ECF5 /* Tweet.swift */; };
 		20AEDC6F1CC995EA0009ECF5 /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDC6B1CC995EA0009ECF5 /* TwitterRequest.swift */; };
 		20AEDC701CC995EA0009ECF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDC6C1CC995EA0009ECF5 /* User.swift */; };
+		20AEDC721CCAD5A50009ECF5 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDC711CCAD5A50009ECF5 /* TweetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		20AEDC6A1CC995EA0009ECF5 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		20AEDC6B1CC995EA0009ECF5 /* TwitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterRequest.swift; sourceTree = "<group>"; };
 		20AEDC6C1CC995EA0009ECF5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		20AEDC711CCAD5A50009ECF5 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,9 @@
 		20AEDC361CC992150009ECF5 /* Smashtag */ = {
 			isa = PBXGroup;
 			children = (
-				20AEDC3B1CC992150009ECF5 /* Main.storyboard */,
 				20AEDC661CC994630009ECF5 /* TweetTableViewController.swift */,
+				20AEDC3B1CC992150009ECF5 /* Main.storyboard */,
+				20AEDC711CCAD5A50009ECF5 /* TweetTableViewCell.swift */,
 				20AEDC681CC995EA0009ECF5 /* Twitter */,
 				20AEDC651CC992210009ECF5 /* Supporting Files */,
 			);
@@ -290,6 +293,7 @@
 				20AEDC381CC992150009ECF5 /* AppDelegate.swift in Sources */,
 				20AEDC6D1CC995EA0009ECF5 /* MediaItem.swift in Sources */,
 				20AEDC6E1CC995EA0009ECF5 /* Tweet.swift in Sources */,
+				20AEDC721CCAD5A50009ECF5 /* TweetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
