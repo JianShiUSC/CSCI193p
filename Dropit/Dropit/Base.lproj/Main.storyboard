@@ -17,12 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYq-bm-AKa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYq-bm-AKa" customClass="BezierPathsView" customModule="Dropit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="jSj-w4-upU" appends="YES" id="Qux-Vv-hrh"/>
+                                    <outletCollection property="gestureRecognizers" destination="U5K-4S-QKV" appends="YES" id="EDG-fC-Gpa"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -44,6 +45,11 @@
                         <action selector="drop:" destination="BYZ-38-t0r" id="Bia-GR-b69"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="U5K-4S-QKV">
+                    <connections>
+                        <action selector="grabDrop:" destination="BYZ-38-t0r" id="ReT-jx-imV"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="325" y="399"/>
         </scene>

@@ -15,6 +15,7 @@
 		20FAF7521CCE9CB9006A5679 /* DropitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FAF7511CCE9CB9006A5679 /* DropitUITests.swift */; };
 		20FAF7611CCE9D36006A5679 /* DropitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FAF7601CCE9D36006A5679 /* DropitViewController.swift */; };
 		20FAF7631CD00E8B006A5679 /* DropitBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FAF7621CD00E8B006A5679 /* DropitBehavior.swift */; };
+		20FAF7651CD01D0A006A5679 /* BezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FAF7641CD01D0A006A5679 /* BezierPathsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		20FAF7531CCE9CB9006A5679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20FAF7601CCE9D36006A5679 /* DropitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitViewController.swift; sourceTree = "<group>"; };
 		20FAF7621CD00E8B006A5679 /* DropitBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropitBehavior.swift; sourceTree = "<group>"; };
+		20FAF7641CD01D0A006A5679 /* BezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierPathsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				20FAF7351CCE9CB9006A5679 /* Main.storyboard */,
 				20FAF7601CCE9D36006A5679 /* DropitViewController.swift */,
+				20FAF7641CD01D0A006A5679 /* BezierPathsView.swift */,
 				20FAF7621CD00E8B006A5679 /* DropitBehavior.swift */,
 				20FAF75F1CCE9CD4006A5679 /* Supporting Files */,
 			);
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FAF7651CD01D0A006A5679 /* BezierPathsView.swift in Sources */,
 				20FAF7611CCE9D36006A5679 /* DropitViewController.swift in Sources */,
 				20FAF7321CCE9CB9006A5679 /* AppDelegate.swift in Sources */,
 				20FAF7631CD00E8B006A5679 /* DropitBehavior.swift in Sources */,
