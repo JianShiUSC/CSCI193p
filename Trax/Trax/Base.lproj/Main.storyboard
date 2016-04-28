@@ -23,9 +23,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-RU-73V">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dzr-RU-73V" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Dd6-a9-FOC"/>
+                            <constraint firstItem="dzr-RU-73V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JGN-Bo-HId"/>
+                            <constraint firstItem="dzr-RU-73V" firstAttribute="trailing" secondItem="lyV-Wm-xMx" secondAttribute="trailing" id="MPS-TW-aSK"/>
+                            <constraint firstItem="dzr-RU-73V" firstAttribute="leading" secondItem="lyV-Wm-xMx" secondAttribute="leading" id="P7L-XB-cbd"/>
                             <constraint firstItem="lyV-Wm-xMx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rxe-wm-sL9"/>
                             <constraint firstItem="lyV-Wm-xMx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="ewS-Eo-Upk"/>
                             <constraint firstItem="lyV-Wm-xMx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="qZH-ED-We9"/>
@@ -33,6 +40,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="dzr-RU-73V" id="d3j-sh-UIX"/>
                         <outlet property="textView" destination="lyV-Wm-xMx" id="Or7-qe-wSB"/>
                     </connections>
                 </viewController>

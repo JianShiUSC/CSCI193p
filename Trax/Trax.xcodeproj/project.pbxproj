@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		208C48581CD192630024120F /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C48571CD192630024120F /* GPX.swift */; };
+		208C485A1CD1B9D80024120F /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C48591CD1B9D80024120F /* MKGPX.swift */; };
 		20FAF7731CD04106006A5679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FAF7721CD04106006A5679 /* AppDelegate.swift */; };
 		20FAF7751CD04106006A5679 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FAF7741CD04106006A5679 /* ViewController.swift */; };
 		20FAF7781CD04106006A5679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FAF7761CD04106006A5679 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		208C48571CD192630024120F /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
+		208C48591CD1B9D80024120F /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
 		20FAF76F1CD04106006A5679 /* Trax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FAF7721CD04106006A5679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20FAF7741CD04106006A5679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +103,9 @@
 			children = (
 				20FAF7721CD04106006A5679 /* AppDelegate.swift */,
 				20FAF7741CD04106006A5679 /* ViewController.swift */,
+				208C48591CD1B9D80024120F /* MKGPX.swift */,
 				20FAF7761CD04106006A5679 /* Main.storyboard */,
+				20FAF77E1CD04106006A5679 /* Info.plist */,
 				20FAF7A01CD0411F006A5679 /* Supporting Files */,
 			);
 			path = Trax;
@@ -126,9 +132,9 @@
 		20FAF7A01CD0411F006A5679 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				208C48571CD192630024120F /* GPX.swift */,
 				20FAF7791CD04106006A5679 /* Assets.xcassets */,
 				20FAF77B1CD04106006A5679 /* LaunchScreen.storyboard */,
-				20FAF77E1CD04106006A5679 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20FAF7751CD04106006A5679 /* ViewController.swift in Sources */,
+				208C485A1CD1B9D80024120F /* MKGPX.swift in Sources */,
 				20FAF7731CD04106006A5679 /* AppDelegate.swift in Sources */,
+				208C48581CD192630024120F /* GPX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +507,7 @@
 				20FAF7991CD04106006A5679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20FAF79A1CD04106006A5679 /* Build configuration list for PBXNativeTarget "TraxTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +516,7 @@
 				20FAF79C1CD04106006A5679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20FAF79D1CD04106006A5679 /* Build configuration list for PBXNativeTarget "TraxUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +525,7 @@
 				20FAF79F1CD04106006A5679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
