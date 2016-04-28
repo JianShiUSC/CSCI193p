@@ -346,7 +346,7 @@ Very similar API to searching.
 Specify source and destination MKMapItem.  
 Asynchronous API to get a bunch of MKRoutes.  
 MKRoute includes a name for the route, turn-by-turn directions, expected travel time, etc.  
-Also come with MKPolyline descriptions of the routes which can be overlaid on the map ...
+Also come with MKPolyline descriptions of the routes which can be overlaid on the map ...   
 ####Overlays
 * Overlays  
     Add overlays to the MKMapView and it will later ask you for a renderer to draw the overlay.  
