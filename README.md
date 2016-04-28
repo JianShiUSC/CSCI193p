@@ -208,3 +208,49 @@ Remember this from CoreLocation ...
     ```
     This is a great place to set up the MKAnnotationView‘s callout accessory views lazily. For example, you might want to wait until this method is called to download an image to show.
 ####MKAnnotationView
+* How are MKAnnotationViews created & associated w/annotations?  
+Very similar to UITableViewCells in a UITableView.  
+Implement the following MKMapViewDelegate method (if not implemented, returns a pin view).
+```swift
+    func mapView(sender: MKMapView, viewForAnnotation: MKAnnotation) -> MKAnnotationView {
+        var view = sender.dequeueReusableAnnotationViewWithIdentifier(IDENT)
+        if !view {
+            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: IDENT)
+            view.canShowCallout = true or false
+        }
+        aView.annotation = annotation // yes, this happens twice if no dequeue
+        // prepare and (if not too expensive) load up accessory views here
+        // or reset them and wait until mapView(didSelectAnnotationView:) to load actual data
+        return view
+    }
+```
+There is no “prototype” in your storyboard, you create them in code as above.
+* Interesting properties ...
+```swift
+    var annotation: MKAnnotation // the annotation; treat as if readonly
+    var image: UIImage // instead of the pin, for example (not an image on the callout)
+    var leftCalloutAccessoryView: UIView // maybe a UIImageView
+    var rightCalloutAccessoryView: UIView // maybe a “disclosure” UIButton
+    var enabled: Bool // false means it ignores touch events, no delegate method, no callout
+    var centerOffset: CGPoint // where is the “head of the pin” is relative to the image
+    var draggable: Bool // only works if the annotation’s coordinate property is { get set }
+```
+* If you set one of the callout accessory views to be a UIControl
+```swiftview.rightCalloutAccessoryView = UIButton.buttonWithType(UIButtonTypeDetailDisclosure)```The following MKMapViewDelegate method will get called when the callout view is touched ...```swiftfunc mapView(MKMapView, annotationView: MKAnnotationView,           calloutAccessoryControlTapped: UIControl)```Maybe you might manually segue from here, for example.
+* Using didSelectAnnotationView: to load up callout accessories  
+Example downloading an image into a leftCalloutAccessoryView that is a UIImageView.  
+In
+```swift
+mapView(viewForAnnotation:), let view.leftCalloutAccessoryView = UIImageView()
+```
+Reset the UIImageView’s image to nil there as well (because of reuse).
+
+Then load the image on demand in mapView(didSelectAnnotationView:) ...
+```swift
+    func mapView(MKMapView, didSelectAnnotationView aView: MKAnnotationView)
+    {
+        if let imageView = aView.leftCalloutAccessoryView as? UIImageView {
+            imageView.image = ... // if you do this on another thread, be careful, views are reused!
+        }
+    }
+```
