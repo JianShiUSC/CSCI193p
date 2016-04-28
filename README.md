@@ -149,3 +149,62 @@ Delegate method locationManager(didRangeBeacons:inRegion:) gives you CLBeacon ob
 * To be a beacon is a bit more involved  
 Beacons are identified by a globally unique UUID (that you generate).  
 Check out CBPeripheralManager (Core Bluetooth Framework).
+####Map Kit
+* MKMapView displays a map
+* The map can have annotations on it  
+Each annotation is a coordinate, a title and a subtitle. They are displayed using an MKAnnotationView (MKPinAnnotationView shown here).
+* Annotations can have a callout  
+It appears when the annotation view is clicked. By default just shows the title and subtitle.
+* But callout can also have accessory views  
+In this example, the left is a UIImageView, the right is a UIButton (UIButtonTypeDetailDisclosure)
+####MKMapView
+* Create with initializer or drag from object palette in Xcode
+```swift
+    import MapKit
+    let mapView = MKMapView()
+```
+* Displays an array of objects which implement MKAnnotation
+```swift
+    var annotations: [MKAnnotation] { get }
+```
+* MKAnnotation protocol
+```swift
+    protocol MKAnnotation: NSObject {
+        var coordinate: CLLocationCoordinate2D { get }
+        var title: String! { get } // optional, but expected to be provided
+        var subtitle: String! { get }
+    }
+```
+Remember this from CoreLocation ...
+```swift
+    struct CLLocationCoordinate2D {
+        var latitude: CLLocationDegrees
+        var longitude: CLLocationDegrees
+    }
+```
+####MKAnnotation
+* Note that the annotations property is readonly, so ...
+```swift
+    var annotations: [MKAnnotation] { get }
+    // Must add/remove annotations with these methods ...
+    func addAnnotation(MKAnnotation)
+    func addAnnotations([MKAnnotation])
+    func removeAnnotation(MKAnnotation)
+    func removeAnnotations([MKAnnotation])
+```
+* Generally a good idea to add all your annotations up-front  
+    Allows the MKMapView to be efficient about how it displays them.  
+    Annotations are light-weight, but annotation views are not.  
+    Luckily MKMapView reuses annotation views similar to how UITableView reuses cells.
+* What do annotations look like on the map?  
+    Annotations are drawn using an MKAnnotationView subclass.
+    The default one is MKPinAnnotationView (which is why they look like pins by default).
+    You can subclass or set properties on existing MKAnnotationViews to modify the look.
+* What happens when you touch on an annotation (e.g. the pin)?
+    Depends on the MKAnnotationView that is associated with the annotation. If canShowCallout is true in the MKAnnotationView, then a little box will appear showing the annotation’s title and subtitle. And this little box (the callout) can be enhanced with left/rightCalloutAccessoryViews.
+    The following MKMapViewDelegate method is also called...
+    ```swift
+    func mapView(MKMapView, didSelectAnnotationView: MKAnnotationView)
+    ```
+    This is a great place to set up the MKAnnotationView‘s callout accessory views lazily. For example, you might want to wait until this method is called to download an image to show.
+####MKAnnotationView
