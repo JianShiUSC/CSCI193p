@@ -349,22 +349,22 @@ MKRoute includes a name for the route, turn-by-turn directions, expected travel 
 Also come with MKPolyline descriptions of the routes which can be overlaid on the map ...
 ####Overlays
 * Overlays  
-    Add overlays to the MKMapView and it will later ask you for a renderer to draw the overlay.
+    Add overlays to the MKMapView and it will later ask you for a renderer to draw the overlay.  
     ```swift
     func addOverlay(MKOverlay, level: MKOverlayLevel)
     ```
-    Level is (currently) either AboveRoads or AboveLabels (over everything but annotation views).
+    Level is (currently) either AboveRoads or AboveLabels (over everything but annotation views).  
     ```swift
     func removeOverlay(MKOverlay)
     ```
 * MKOverlay protocol  
-    Protocol which includes MKAnnotation plus ...
+    Protocol which includes MKAnnotation plus ...  
     ```swift
     var boundingMapRect: MKMapRect
     func intersectsMapRect(MKMapRect) -> Bool // optional, uses boundingMapRect otherwise
     ```
 * Overlays are associated with MKOverlayRenderers via delegate  
-    Just like annotations are associated with MKAnnotationViews ...
+    Just like annotations are associated with MKAnnotationViews ...  
     ```swift
     func mapView(MKMapView, rendererForOverlay: MKOverlay) -> MKOverlayRenderer
     ```
