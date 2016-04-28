@@ -367,7 +367,7 @@ Also come with MKPolyline descriptions of the routes which can be overlaid on th
     Just like annotations are associated with MKAnnotationViews ...  
     ```swift
     func mapView(MKMapView, rendererForOverlay: MKOverlay) -> MKOverlayRenderer
-    ```
+    ```  
 ####MKOverlayView
 * Built-in Overlays and Renderers for numerous shapes  
 ```swift
