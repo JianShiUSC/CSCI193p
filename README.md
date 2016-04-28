@@ -254,3 +254,124 @@ Then load the image on demand in mapView(didSelectAnnotationView:) ...
         }
     }
 ```
+####MKMapView
+* Configuring the map view’s display type
+```swift
+var mapType: MKMapType // .Standard, .Satellite, .Hybrid
+```
+* Showing the user’s current location
+```swift
+var showsUserLocation: Bool
+var isUserLocationVisible: Bool
+var userLocation: MKUserLocation
+```
+MKUserLocation is an object which conforms to MKAnnotation which holds the user’s location.
+* Restricting the user’s interaction with the map
+```swift
+var zoomEnabled: Bool
+var scrollEnabled: Bool
+var pitchEnabled: Bool // 3D
+var rotateEnabled: Bool
+```
+####MKMapCamera
+* Setting where the user is seeing the map from (in 3D)
+```swift
+var camera: MKMapCamera // property in MKMapView
+```
+* MKMapCamera  
+Specify centerCoordinate, heading, pitch and altitude of the camera.  
+Or use convenient initializer in MKMapCamera ...
+```swift
+let camera = MKMapCamera(lookingAtCenterCoordinate: CLLocationCoordinate2D,
+                                 fromEyeCoordinate: CLLocationCoordinate2D,
+                                       eyeAltitude: CLLocationDistance)
+```
+####MKMapView
+* Controlling the region (part of the world) the map is displaying
+```swift
+var region: MKCoordinateRegion
+struct MKCoordinateRegion {
+    var center: CLLocationCoordinate2D // remember from CoreLocation, this is lat/long
+    var span: MKCoordinateSpan
+}
+struct MKCoordinateSpan {
+    var latitudeDelta: CLLocationDegrees
+    var longitudeDelta: CLLocationDegrees
+}
+func setRegion(MKCoordinateRegion, animated: Bool) // animate setting the region
+```
+* Can also set the center point only or set to show annotations
+```swift
+var centerCoordinate: CLLocationCoordinate2D
+func setCenterCoordinate(CLLocationCoordinate2D, animated: Bool)
+func showAnnotations([MKAnnotation], animated: Bool)
+```
+* Lots of C functions to convert points, regions, rects, etc.  
+See documentation, e.g. MKMapRectContainsPoint, MKMapPointForCoordinate, etc.
+* Converting to/from map points/rects from/to view coordinates
+```swift
+    func mapPointForPoint(CGPoint) -> MKMapPoint
+    func mapRectForRect(CGRect) -> MKMapRect
+    func pointForMapPoint(MKMapPoint) -> CGPoint
+    func rectForMapRect(MKMapRect) -> CGRect
+```
+* Another MKMapViewDelegate method
+```swift
+func mapView(MKMapView, didChangeRegionAnimated: Bool)
+```
+This is a good place to “chain” animations to the map.
+When you display somewhere new in the map that is far away, zoom out, then back in.  
+This method will let you know when it’s finished zooming out, so you can then zoom in.
+####MKLocalSearch
+* Searching for places in the world
+Can search by “natural language” strings asynchronously (uses the network)
+```swift
+    var request = MKLocalSearchRequest()
+    request.naturalLanguageQuery = @“Ike’s”
+    request.region = ... // e.g., Stanford campus
+    let search = MKLocalSearch(request: request)
+    search.startWithCompletionHandler { (MKLocalSearchResponse, NSError) -> Void in
+        // response contains an array of MKMapItem which contains MKPlacemark
+        // MKPlacemark contains location, name of location, postalCode, region, etc.
+    }
+```
+* MKMapItem
+You can open a MKMapItem that you get back from a MKLocalSearch in the Maps app ...
+```swift
+func openInMapsWithLaunchOptions([NSObject:AnyObject]) -> Bool // the options can specify region, show traffic, etc
+```
+####MKDirections
+Getting directions from one place to another
+Very similar API to searching.  
+Specify source and destination MKMapItem.  
+Asynchronous API to get a bunch of MKRoutes.  
+MKRoute includes a name for the route, turn-by-turn directions, expected travel time, etc.  
+Also come with MKPolyline descriptions of the routes which can be overlaid on the map ...
+####Overlays
+* Overlays  
+    Add overlays to the MKMapView and it will later ask you for a renderer to draw the overlay.
+    ```swift
+    func addOverlay(MKOverlay, level: MKOverlayLevel)
+    ```
+    Level is (currently) either AboveRoads or AboveLabels (over everything but annotation views).
+    ```swift
+    func removeOverlay(MKOverlay)
+    ```
+* MKOverlay protocol  
+    Protocol which includes MKAnnotation plus ...
+    ```swift
+    var boundingMapRect: MKMapRect
+    func intersectsMapRect(MKMapRect) -> Bool // optional, uses boundingMapRect otherwise
+    ```
+* Overlays are associated with MKOverlayRenderers via delegate  
+    Just like annotations are associated with MKAnnotationViews ...
+    ```swift
+    func mapView(MKMapView, rendererForOverlay: MKOverlay) -> MKOverlayRenderer
+    ```
+####MKOverlayView
+* Built-in Overlays and Renderers for numerous shapes  
+    MKCircleRenderer
+    MKPolylineRenderer
+    MKPolygonRenderer
+    MKTileOverlayRenderer // can also be used to replace the map data from Apple  
+There’s a whole set of MKShape and subclasses thereof for you to explore.
