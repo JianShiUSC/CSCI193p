@@ -118,7 +118,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate
             }
         }
 
-        // gpxURL = NSURL(string: "http://cs193p.stanford.edu/Vacation.gpx") // for demo/debug/testing
+        gpxURL = NSURL(string: "https://cs193p.stanford.edu/Vacation.gpx") // for demo/debug/testing
     }
 
     // MARK: - Constants
