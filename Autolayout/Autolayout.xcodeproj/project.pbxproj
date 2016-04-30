@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2068C55C1CD561E5003D5866 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2068C55E1CD561E5003D5866 /* InfoPlist.strings */; };
+		2068C5611CD561E5003D5866 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2068C5631CD561E5003D5866 /* InfoPlist.strings */; };
+		2068C5661CD561E5003D5866 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2068C5681CD561E5003D5866 /* InfoPlist.strings */; };
 		20AEDBBC1CC75DB60009ECF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDBBB1CC75DB60009ECF5 /* AppDelegate.swift */; };
 		20AEDBBE1CC75DB60009ECF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AEDBBD1CC75DB60009ECF5 /* ViewController.swift */; };
 		20AEDBC11CC75DB60009ECF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AEDBBF1CC75DB60009ECF5 /* Main.storyboard */; };
@@ -35,6 +38,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2068C5501CD55FDE003D5866 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		2068C5511CD55FDE003D5866 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		2068C5521CD55FED003D5866 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		2068C5531CD55FED003D5866 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2068C5541CD55FFA003D5866 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		2068C5551CD55FFA003D5866 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		2068C5561CD5600D003D5866 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		2068C5571CD5600D003D5866 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2068C5581CD56012003D5866 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		2068C5591CD56012003D5866 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		2068C55D1CD561E5003D5866 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2068C5621CD561E5003D5866 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2068C5671CD561E5003D5866 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		20AEDBB81CC75DB60009ECF5 /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AEDBBB1CC75DB60009ECF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20AEDBBD1CC75DB60009ECF5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +127,7 @@
 		20AEDBCF1CC75DB70009ECF5 /* AutolayoutTests */ = {
 			isa = PBXGroup;
 			children = (
+				2068C5681CD561E5003D5866 /* InfoPlist.strings */,
 				20AEDBD01CC75DB70009ECF5 /* AutolayoutTests.swift */,
 				20AEDBD21CC75DB70009ECF5 /* Info.plist */,
 			);
@@ -120,6 +137,7 @@
 		20AEDBDA1CC75DB70009ECF5 /* AutolayoutUITests */ = {
 			isa = PBXGroup;
 			children = (
+				2068C55E1CD561E5003D5866 /* InfoPlist.strings */,
 				20AEDBDB1CC75DB70009ECF5 /* AutolayoutUITests.swift */,
 				20AEDBDD1CC75DB70009ECF5 /* Info.plist */,
 			);
@@ -129,6 +147,7 @@
 		20AEDBE91CC75DC50009ECF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2068C5631CD561E5003D5866 /* InfoPlist.strings */,
 				20AEDBC41CC75DB60009ECF5 /* LaunchScreen.storyboard */,
 				20AEDBBB1CC75DB60009ECF5 /* AppDelegate.swift */,
 				20AEDBC71CC75DB60009ECF5 /* Info.plist */,
@@ -241,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AEDBC61CC75DB60009ECF5 /* LaunchScreen.storyboard in Resources */,
+				2068C5611CD561E5003D5866 /* InfoPlist.strings in Resources */,
 				20AEDBC31CC75DB60009ECF5 /* Assets.xcassets in Resources */,
 				20AEDBC11CC75DB60009ECF5 /* Main.storyboard in Resources */,
 			);
@@ -250,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2068C5661CD561E5003D5866 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2068C55C1CD561E5003D5866 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,10 +327,39 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2068C55E1CD561E5003D5866 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2068C55D1CD561E5003D5866 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2068C5631CD561E5003D5866 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2068C5621CD561E5003D5866 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2068C5681CD561E5003D5866 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2068C5671CD561E5003D5866 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		20AEDBBF1CC75DB60009ECF5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				20AEDBC01CC75DB60009ECF5 /* Base */,
+				2068C5501CD55FDE003D5866 /* zh-Hans */,
+				2068C5521CD55FED003D5866 /* fr */,
+				2068C5541CD55FFA003D5866 /* zh-Hant */,
+				2068C5561CD5600D003D5866 /* ar */,
+				2068C5581CD56012003D5866 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -317,6 +368,11 @@
 			isa = PBXVariantGroup;
 			children = (
 				20AEDBC51CC75DB60009ECF5 /* Base */,
+				2068C5511CD55FDE003D5866 /* zh-Hans */,
+				2068C5531CD55FED003D5866 /* fr */,
+				2068C5551CD55FFA003D5866 /* zh-Hant */,
+				2068C5571CD5600D003D5866 /* ar */,
+				2068C5591CD56012003D5866 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -496,6 +552,7 @@
 				20AEDBE21CC75DB70009ECF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20AEDBE31CC75DB70009ECF5 /* Build configuration list for PBXNativeTarget "AutolayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +561,7 @@
 				20AEDBE51CC75DB70009ECF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20AEDBE61CC75DB70009ECF5 /* Build configuration list for PBXNativeTarget "AutolayoutUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +570,7 @@
 				20AEDBE81CC75DB70009ECF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,18 @@
+/* Class = "UILabel"; text = "Name"; ObjectID = "GLF-bX-ne4"; */
+"GLF-bX-ne4.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Change Security"; ObjectID = "WY5-WM-QAI"; */
+"WY5-WM-QAI.normalTitle" = "Change Security";
+
+/* Class = "UILabel"; text = "Company"; ObjectID = "jB6-UN-vUO"; */
+"jB6-UN-vUO.text" = "Company";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "vhO-Yt-Di4"; */
+"vhO-Yt-Di4.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "xQg-35-Uzf"; */
+"xQg-35-Uzf.text" = "Password";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "zg5-b8-Mcc"; */
+"zg5-b8-Mcc.text" = "Username";
+
