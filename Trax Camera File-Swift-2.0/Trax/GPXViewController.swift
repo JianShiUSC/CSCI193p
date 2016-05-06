@@ -15,7 +15,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
 
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
-            mapView.mapType = .Satellite
+            mapView.mapType = .Standard
             mapView.delegate = self
         }
     }
@@ -181,7 +181,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             }
         }
 
-        gpxURL = NSURL(string: "http://cs193p.stanford.edu/Vacation.gpx") // for demo/debug/testing
+        gpxURL = NSURL(string: "http://thunderbo.lt/Vacation.gpx") // for demo/debug/testing
     }
 
     // MARK: - Constants
