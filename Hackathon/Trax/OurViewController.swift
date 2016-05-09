@@ -1,9 +1,9 @@
 //
 //  OurViewController.swift
-//  Trax
+//  Hackathon
 //
 //  Created by 淡蓝色的泪 on 5/6/16.
-//  Copyright © 2016 Stanford University. All rights reserved.
+//  Copyright © University of Southern California. All rights reserved.
 //
 
 import UIKit

@@ -1,9 +1,9 @@
 //
 //  SimpleMapViewController.swift
-//  Trax
+//  Hackathon
 //
-//  Created by CS193p Instructor.
-//  Copyright (c) 2015 Stanford University. All rights reserved.
+//  Created by 淡蓝色的泪 on 5/6/16.
+//  Copyright © University of Southern California. All rights reserved.
 //
 
 import UIKit
