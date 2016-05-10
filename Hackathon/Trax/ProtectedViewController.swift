@@ -12,7 +12,7 @@ class ProtectedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +23,9 @@ class ProtectedViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondViewController = storyboard.instantiateViewControllerWithIdentifier("SecondVC") as UIViewController
+        presentViewController(secondViewController, animated: true, completion: nil)
         if !isUserLoggedIn
         {
             self.performSegueWithIdentifier("loginView", sender: self)

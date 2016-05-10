@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     
+//    var storeVal: String? = "nil"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +30,7 @@ class LoginViewController: UIViewController {
         
         let userEmail = userEmailTextField.text
         let userPassword = userPasswordTextField.text
+//        storeVal = userEmailTextField.text!
         
         let userEmailStored = NSUserDefaults.standardUserDefaults().stringForKey("userEmail")
         let userPasswordStored = NSUserDefaults.standardUserDefaults().stringForKey("userPassword")
@@ -40,18 +43,10 @@ class LoginViewController: UIViewController {
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
                 NSUserDefaults.standardUserDefaults().synchronize()
                 self.dismissViewControllerAnimated(true, completion: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let secondViewController = storyboard.instantiateViewControllerWithIdentifier("SecondVC") as UIViewController
+                presentViewController(secondViewController, animated: true, completion: nil)
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
