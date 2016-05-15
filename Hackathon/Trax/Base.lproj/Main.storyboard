@@ -288,7 +288,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HealthCare List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEE-ae-5u6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apartment List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEE-ae-5u6">
                                                     <rect key="frame" x="8" y="8" width="584" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -627,7 +627,7 @@
             </objects>
             <point key="canvasLocation" x="1504" y="154"/>
         </scene>
-        <!--Country List-->
+        <!--Apartment List-->
         <scene sceneID="DPu-RG-kNZ">
             <objects>
                 <tableViewController id="G2L-Oo-mvO" customClass="OurTableViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
@@ -667,7 +667,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Country List" id="a1R-6d-lYY">
+                    <navigationItem key="navigationItem" title="Apartment List" id="a1R-6d-lYY">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="avZ-mN-wdB"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -702,7 +702,7 @@
         <image name="Camera" width="38" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="32I-UE-Gk7"/>
+        <segue reference="2ep-Hh-Zmf"/>
         <segue reference="VlS-et-x12"/>
     </inferredMetricsTieBreakers>
 </document>

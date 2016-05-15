@@ -59,10 +59,10 @@ class OurTableViewController: UITableViewController {
         }
         
         let countryName = data["name"]["common"].stringValue
-        let countryCapital = data["capital"].stringValue
+        let countryAddress = data["address"].stringValue
         
         cell.textLabel?.text = countryName
-        cell.detailTextLabel?.text = countryCapital
+        cell.detailTextLabel?.text = countryAddress
         
         return cell
     }

@@ -190,7 +190,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             }
         }
 
-        gpxURL = NSURL(string: "http://thunderbo.lt/Vacation.gpx") // for demo/debug/testing
+        gpxURL = NSURL(string: "http://www.shijianloveslareine.com/Vacation.gpx") // for demo/debug/testing
     }
 
     // MARK: - Constants
