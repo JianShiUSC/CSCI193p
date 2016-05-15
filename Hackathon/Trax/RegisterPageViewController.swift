@@ -90,7 +90,7 @@ class RegisterPageViewController: UIViewController {
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
-                    var resultValue = parseJSON["status"] as! String!
+                    let resultValue = parseJSON["status"] as! String!
                     print("result: \(resultValue)")
                     
                     var isUserRegistered: Bool = false
@@ -106,7 +106,7 @@ class RegisterPageViewController: UIViewController {
                     
                     dispatch_async(dispatch_get_main_queue(), {
                         
-                        var myAlert = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: UIAlertControllerStyle.Alert)
+                        let myAlert = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: UIAlertControllerStyle.Alert)
                         
                         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { action in
                             self.dismissViewControllerAnimated(true, completion: nil)

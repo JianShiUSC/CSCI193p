@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
                 
                 if let parseJSON = json {
-                    var resultValue = parseJSON["status"] as! String!
+                    let resultValue = parseJSON["status"] as! String!
                     print("result: \(resultValue)")
                     
                     if (resultValue == "Success")
@@ -79,8 +79,10 @@ class LoginViewController: UIViewController {
                         NSUserDefaults.standardUserDefaults().synchronize()
                         self.dismissViewControllerAnimated(true, completion: nil)
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let secondViewController = storyboard.instantiateViewControllerWithIdentifier("SecondVC") as UIViewController
-                        self.presentViewController(secondViewController, animated: true, completion: nil)
+                        dispatch_async(dispatch_get_main_queue()) {
+                            let secondViewController = storyboard.instantiateViewControllerWithIdentifier("SecondVC") as UIViewController
+                            self.presentViewController(secondViewController, animated: true, completion: nil)
+                        }
                     }
                 }
                 
