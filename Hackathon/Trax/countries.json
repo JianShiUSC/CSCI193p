@@ -235,8 +235,10 @@
 		"name": {
 			"common": "University Gateway Apartments",
 			"official": "Republic of Albania",
-			"native": {
-				"sqi": {
+			"native":
+            {
+				"sqi":
+                {
 					"official": "Republika e Shqip\u00ebris\u00eb",
 					"common": "Shqip\u00ebria"
 				}
@@ -253,7 +255,281 @@
 		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
 		"region": "Europe",
 		"subregion": "Southern Europe",
-		"languages": {
+		"languages":
+        {
+			"sqi": "Albanian"
+		},
+		"translations": {
+			"cym": {"official": "Republic of Albania", "common": "Albania"},
+			"deu": {"official": "Republik Albanien", "common": "Albanien"},
+			"fra": {"official": "R\u00e9publique d'Albanie", "common": "Albanie"},
+			"hrv": {"official": "Republika Albanija", "common": "Albanija"},
+			"ita": {"official": "Repubblica d'Albania", "common": "Albania"},
+			"jpn": {"official": "\u30a2\u30eb\u30d0\u30cb\u30a2\u5171\u548c\u56fd", "common": "\u30a2\u30eb\u30d0\u30cb\u30a2"},
+			"nld": {"official": "Republiek Albani\u00eb", "common": "Albani\u00eb"},
+			"por": {"official": "Rep\u00fablica da Alb\u00e2nia", "common": "Alb\u00e2nia"},
+			"rus": {"official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0431\u0430\u043d\u0438\u044f", "common": "\u0410\u043b\u0431\u0430\u043d\u0438\u044f"},
+			"spa": {"official": "Rep\u00fablica de Albania", "common": "Albania"},
+			"fin": {"official": "Albanian tasavalta", "common": "Albania"}
+		},
+		"latlng": [41, 20],
+		"demonym": "Albanian",
+		"landlocked": false,
+		"borders": ["MNE", "GRC", "MKD", "UNK"],
+		"area": 28748
+	},
+	{
+		"name": {
+			"common": "Currie Hall",
+			"official": "Republic of Albania",
+		},
+		"tld": [".al"],
+		"cca2": "AL",
+		"ccn3": "008",
+		"cca3": "ALB",
+		"cioc": "ALB",
+		"currency": ["ALL"],
+		"callingCode": ["355"],
+		"address": "2215 Alcazar St, Los Angeles, CA 90033",
+		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
+		"region": "Europe",
+		"subregion": "Southern Europe",
+		"languages":
+		{
+			"sqi": "Albanian"
+		},
+		"translations": {
+			"cym": {"official": "Republic of Albania", "common": "Albania"},
+			"deu": {"official": "Republik Albanien", "common": "Albanien"},
+			"fra": {"official": "R\u00e9publique d'Albanie", "common": "Albanie"},
+			"hrv": {"official": "Republika Albanija", "common": "Albanija"},
+			"ita": {"official": "Repubblica d'Albania", "common": "Albania"},
+			"jpn": {"official": "\u30a2\u30eb\u30d0\u30cb\u30a2\u5171\u548c\u56fd", "common": "\u30a2\u30eb\u30d0\u30cb\u30a2"},
+			"nld": {"official": "Republiek Albani\u00eb", "common": "Albani\u00eb"},
+			"por": {"official": "Rep\u00fablica da Alb\u00e2nia", "common": "Alb\u00e2nia"},
+			"rus": {"official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0431\u0430\u043d\u0438\u044f", "common": "\u0410\u043b\u0431\u0430\u043d\u0438\u044f"},
+			"spa": {"official": "Rep\u00fablica de Albania", "common": "Albania"},
+			"fin": {"official": "Albanian tasavalta", "common": "Albania"}
+		},
+		"latlng": [41, 20],
+		"demonym": "Albanian",
+		"landlocked": false,
+		"borders": ["MNE", "GRC", "MKD", "UNK"],
+		"area": 28748
+	},
+	{
+		"name": {
+			"common": "First Choice Housing Near USC",
+			"official": "Republic of Albania",
+		},
+		"tld": [".al"],
+		"cca2": "AL",
+		"ccn3": "008",
+		"cca3": "ALB",
+		"cioc": "ALB",
+		"currency": ["ALL"],
+		"callingCode": ["355"],
+		"address": "3036 S Hoover St, Los Angeles, CA 90007",
+		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
+		"region": "Europe",
+		"subregion": "Southern Europe",
+		"languages":
+		{
+			"sqi": "Albanian"
+		},
+		"translations": {
+			"cym": {"official": "Republic of Albania", "common": "Albania"},
+			"deu": {"official": "Republik Albanien", "common": "Albanien"},
+			"fra": {"official": "R\u00e9publique d'Albanie", "common": "Albanie"},
+			"hrv": {"official": "Republika Albanija", "common": "Albanija"},
+			"ita": {"official": "Repubblica d'Albania", "common": "Albania"},
+			"jpn": {"official": "\u30a2\u30eb\u30d0\u30cb\u30a2\u5171\u548c\u56fd", "common": "\u30a2\u30eb\u30d0\u30cb\u30a2"},
+			"nld": {"official": "Republiek Albani\u00eb", "common": "Albani\u00eb"},
+			"por": {"official": "Rep\u00fablica da Alb\u00e2nia", "common": "Alb\u00e2nia"},
+			"rus": {"official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0431\u0430\u043d\u0438\u044f", "common": "\u0410\u043b\u0431\u0430\u043d\u0438\u044f"},
+			"spa": {"official": "Rep\u00fablica de Albania", "common": "Albania"},
+			"fin": {"official": "Albanian tasavalta", "common": "Albania"}
+		},
+		"latlng": [41, 20],
+		"demonym": "Albanian",
+		"landlocked": false,
+		"borders": ["MNE", "GRC", "MKD", "UNK"],
+		"area": 28748
+	},
+	{
+		"name": {
+			"common": "USC Troy Hall Apartments",
+			"official": "Republic of Albania",
+		},
+		"tld": [".al"],
+		"cca2": "AL",
+		"ccn3": "008",
+		"cca3": "ALB",
+		"cioc": "ALB",
+		"currency": ["ALL"],
+		"callingCode": ["355"],
+		"address": "3025 Royal St, Los Angeles, CA 90007",
+		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
+		"region": "Europe",
+		"subregion": "Southern Europe",
+		"languages":
+		{
+			"sqi": "Albanian"
+		},
+		"translations": {
+			"cym": {"official": "Republic of Albania", "common": "Albania"},
+			"deu": {"official": "Republik Albanien", "common": "Albanien"},
+			"fra": {"official": "R\u00e9publique d'Albanie", "common": "Albanie"},
+			"hrv": {"official": "Republika Albanija", "common": "Albanija"},
+			"ita": {"official": "Repubblica d'Albania", "common": "Albania"},
+			"jpn": {"official": "\u30a2\u30eb\u30d0\u30cb\u30a2\u5171\u548c\u56fd", "common": "\u30a2\u30eb\u30d0\u30cb\u30a2"},
+			"nld": {"official": "Republiek Albani\u00eb", "common": "Albani\u00eb"},
+			"por": {"official": "Rep\u00fablica da Alb\u00e2nia", "common": "Alb\u00e2nia"},
+			"rus": {"official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0431\u0430\u043d\u0438\u044f", "common": "\u0410\u043b\u0431\u0430\u043d\u0438\u044f"},
+			"spa": {"official": "Rep\u00fablica de Albania", "common": "Albania"},
+			"fin": {"official": "Albanian tasavalta", "common": "Albania"}
+		},
+		"latlng": [41, 20],
+		"demonym": "Albanian",
+		"landlocked": false,
+		"borders": ["MNE", "GRC", "MKD", "UNK"],
+		"area": 28748
+	},
+	{
+		"name": {
+			"common": "USC Student Housing - Centurion Apartments",
+			"official": "Republic of Albania",
+		},
+		"tld": [".al"],
+		"cca2": "AL",
+		"ccn3": "008",
+		"cca3": "ALB",
+		"cioc": "ALB",
+		"currency": ["ALL"],
+		"callingCode": ["355"],
+		"address": "1240 W 29th St, Los Angeles, CA 90007",
+		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
+		"region": "Europe",
+		"subregion": "Southern Europe",
+		"languages":
+		{
+			"sqi": "Albanian"
+		},
+		"translations": {
+			"cym": {"official": "Republic of Albania", "common": "Albania"},
+			"deu": {"official": "Republik Albanien", "common": "Albanien"},
+			"fra": {"official": "R\u00e9publique d'Albanie", "common": "Albanie"},
+			"hrv": {"official": "Republika Albanija", "common": "Albanija"},
+			"ita": {"official": "Repubblica d'Albania", "common": "Albania"},
+			"jpn": {"official": "\u30a2\u30eb\u30d0\u30cb\u30a2\u5171\u548c\u56fd", "common": "\u30a2\u30eb\u30d0\u30cb\u30a2"},
+			"nld": {"official": "Republiek Albani\u00eb", "common": "Albani\u00eb"},
+			"por": {"official": "Rep\u00fablica da Alb\u00e2nia", "common": "Alb\u00e2nia"},
+			"rus": {"official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0431\u0430\u043d\u0438\u044f", "common": "\u0410\u043b\u0431\u0430\u043d\u0438\u044f"},
+			"spa": {"official": "Rep\u00fablica de Albania", "common": "Albania"},
+			"fin": {"official": "Albanian tasavalta", "common": "Albania"}
+		},
+		"latlng": [41, 20],
+		"demonym": "Albanian",
+		"landlocked": false,
+		"borders": ["MNE", "GRC", "MKD", "UNK"],
+		"area": 28748
+	},
+	{
+		"name": {
+			"common": "USC Annenberg House Apartments",
+			"official": "Republic of Albania",
+		},
+		"tld": [".al"],
+		"cca2": "AL",
+		"ccn3": "008",
+		"cca3": "ALB",
+		"cioc": "ALB",
+		"currency": ["ALL"],
+		"callingCode": ["355"],
+		"address": "711 W 27th St, Los Angeles, CA 90007",
+		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
+		"region": "Europe",
+		"subregion": "Southern Europe",
+		"languages":
+		{
+			"sqi": "Albanian"
+		},
+		"translations": {
+			"cym": {"official": "Republic of Albania", "common": "Albania"},
+			"deu": {"official": "Republik Albanien", "common": "Albanien"},
+			"fra": {"official": "R\u00e9publique d'Albanie", "common": "Albanie"},
+			"hrv": {"official": "Republika Albanija", "common": "Albanija"},
+			"ita": {"official": "Repubblica d'Albania", "common": "Albania"},
+			"jpn": {"official": "\u30a2\u30eb\u30d0\u30cb\u30a2\u5171\u548c\u56fd", "common": "\u30a2\u30eb\u30d0\u30cb\u30a2"},
+			"nld": {"official": "Republiek Albani\u00eb", "common": "Albani\u00eb"},
+			"por": {"official": "Rep\u00fablica da Alb\u00e2nia", "common": "Alb\u00e2nia"},
+			"rus": {"official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0431\u0430\u043d\u0438\u044f", "common": "\u0410\u043b\u0431\u0430\u043d\u0438\u044f"},
+			"spa": {"official": "Rep\u00fablica de Albania", "common": "Albania"},
+			"fin": {"official": "Albanian tasavalta", "common": "Albania"}
+		},
+		"latlng": [41, 20],
+		"demonym": "Albanian",
+		"landlocked": false,
+		"borders": ["MNE", "GRC", "MKD", "UNK"],
+		"area": 28748
+	},
+	{
+		"name": {
+			"common": "USC Mark Hall",
+			"official": "Republic of Albania",
+		},
+		"tld": [".al"],
+		"cca2": "AL",
+		"ccn3": "008",
+		"cca3": "ALB",
+		"cioc": "ALB",
+		"currency": ["ALL"],
+		"callingCode": ["355"],
+		"address": "Pardee Tower, 612 Hellman Way, Los Angeles, CA 90089",
+		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
+		"region": "Europe",
+		"subregion": "Southern Europe",
+		"languages":
+		{
+			"sqi": "Albanian"
+		},
+		"translations": {
+			"cym": {"official": "Republic of Albania", "common": "Albania"},
+			"deu": {"official": "Republik Albanien", "common": "Albanien"},
+			"fra": {"official": "R\u00e9publique d'Albanie", "common": "Albanie"},
+			"hrv": {"official": "Republika Albanija", "common": "Albanija"},
+			"ita": {"official": "Repubblica d'Albania", "common": "Albania"},
+			"jpn": {"official": "\u30a2\u30eb\u30d0\u30cb\u30a2\u5171\u548c\u56fd", "common": "\u30a2\u30eb\u30d0\u30cb\u30a2"},
+			"nld": {"official": "Republiek Albani\u00eb", "common": "Albani\u00eb"},
+			"por": {"official": "Rep\u00fablica da Alb\u00e2nia", "common": "Alb\u00e2nia"},
+			"rus": {"official": "\u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430 \u0410\u043b\u0431\u0430\u043d\u0438\u044f", "common": "\u0410\u043b\u0431\u0430\u043d\u0438\u044f"},
+			"spa": {"official": "Rep\u00fablica de Albania", "common": "Albania"},
+			"fin": {"official": "Albanian tasavalta", "common": "Albania"}
+		},
+		"latlng": [41, 20],
+		"demonym": "Albanian",
+		"landlocked": false,
+		"borders": ["MNE", "GRC", "MKD", "UNK"],
+		"area": 28748
+	},
+	{
+		"name": {
+			"common": "USC The Row",
+			"official": "Republic of Albania",
+		},
+		"tld": [".al"],
+		"cca2": "AL",
+		"ccn3": "008",
+		"cca3": "ALB",
+		"cioc": "ALB",
+		"currency": ["ALL"],
+		"callingCode": ["355"],
+		"address": "W 28th St, Los Angeles, CA 90007",
+		"altSpellings": ["AL", "Shqip\u00ebri", "Shqip\u00ebria", "Shqipnia"],
+		"region": "Europe",
+		"subregion": "Southern Europe",
+		"languages":
+		{
 			"sqi": "Albanian"
 		},
 		"translations": {
