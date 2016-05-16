@@ -2,7 +2,6 @@
 	{
 		"name": {
 			"common": "The Lorenzo",
-			"official": "Aruba",
 			"native": {
 				"nld": {
 					"official": "Aruba",
@@ -50,7 +49,6 @@
 	{
 		"name": {
 			"common": "City Park Apartments",
-			"official": "Islamic Republic of Afghanistan",
 			"native": {
 				"prs": {
 					"official": "\u062c\u0645\u0647\u0648\u0631\u06cc \u0627\u0633\u0644\u0627\u0645\u06cc \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
@@ -104,7 +102,6 @@
 	{
 		"name": {
 			"common": "Ellendale Arms Apartments",
-			"official": "Republic of Angola",
 			"native": {
 				"por": {
 					"official": "Rep\u00fablica de Angola",
@@ -148,7 +145,6 @@
 	{
 		"name": {
 			"common": "Tuscany",
-			"official": "Anguilla",
 			"native": {
 				"eng": {
 					"official": "Anguilla",
@@ -191,7 +187,6 @@
 	{
 		"name": {
 			"common": "Trojan Terrace",
-			"official": "\u00c5land Islands",
 			"native": {
 				"swe": {
 					"official": "Landskapet \u00c5land",
@@ -234,7 +229,6 @@
 	{
 		"name": {
 			"common": "University Gateway Apartments",
-			"official": "Republic of Albania",
 			"native":
             {
 				"sqi":
@@ -281,7 +275,6 @@
 	{
 		"name": {
 			"common": "Currie Hall",
-			"official": "Republic of Albania",
 		},
 		"tld": [".al"],
 		"cca2": "AL",
@@ -320,7 +313,6 @@
 	{
 		"name": {
 			"common": "First Choice Housing Near USC",
-			"official": "Republic of Albania",
 		},
 		"tld": [".al"],
 		"cca2": "AL",
@@ -359,7 +351,6 @@
 	{
 		"name": {
 			"common": "USC Troy Hall Apartments",
-			"official": "Republic of Albania",
 		},
 		"tld": [".al"],
 		"cca2": "AL",
@@ -398,7 +389,6 @@
 	{
 		"name": {
 			"common": "USC Student Housing - Centurion Apartments",
-			"official": "Republic of Albania",
 		},
 		"tld": [".al"],
 		"cca2": "AL",
@@ -437,7 +427,6 @@
 	{
 		"name": {
 			"common": "USC Annenberg House Apartments",
-			"official": "Republic of Albania",
 		},
 		"tld": [".al"],
 		"cca2": "AL",
@@ -476,7 +465,6 @@
 	{
 		"name": {
 			"common": "USC Mark Hall",
-			"official": "Republic of Albania",
 		},
 		"tld": [".al"],
 		"cca2": "AL",
@@ -515,7 +503,6 @@
 	{
 		"name": {
 			"common": "USC The Row",
-			"official": "Republic of Albania",
 		},
 		"tld": [".al"],
 		"cca2": "AL",
