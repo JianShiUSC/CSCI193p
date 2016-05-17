@@ -25,12 +25,21 @@
                                     <outletCollection property="gestureRecognizers" destination="vvj-4x-Xck" appends="YES" id="6if-5l-VoU"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IY2-At-6Ct">
+                                <rect key="frame" x="532" y="550" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1o-A8-kkH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5L5-UZ-n3U" secondAttribute="trailing" id="Ube-vE-8ZS"/>
                             <constraint firstItem="5L5-UZ-n3U" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="V5Q-qN-pUC"/>
                             <constraint firstItem="5L5-UZ-n3U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iUN-KF-sbI"/>
+                            <constraint firstItem="IY2-At-6Ct" firstAttribute="leading" secondItem="5L5-UZ-n3U" secondAttribute="trailing" constant="-68" id="lY3-Zr-eOh"/>
+                            <constraint firstItem="IY2-At-6Ct" firstAttribute="top" secondItem="5L5-UZ-n3U" secondAttribute="bottom" constant="-50" id="vDk-cO-l3i"/>
                             <constraint firstItem="5L5-UZ-n3U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wrr-Is-9xB"/>
                         </constraints>
                     </view>

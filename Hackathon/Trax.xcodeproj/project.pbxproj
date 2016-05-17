@@ -15,6 +15,8 @@
 		205AF52E1CDDC381009858B5 /* OurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AF52D1CDDC381009858B5 /* OurViewController.swift */; };
 		205AF5321CDEC46B009858B5 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 205AF5311CDEC46B009858B5 /* countries.json */; };
 		205AF5341CDEC4CA009858B5 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AF5331CDEC4CA009858B5 /* SwiftyJSON.swift */; };
+		20FF2F131CEAD67B007647B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FF2F121CEAD67B007647B6 /* MapKit.framework */; };
+		20FF2F151CEADA31007647B6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FF2F141CEADA31007647B6 /* LocationManager.swift */; };
 		EC186E651A9D906F00A87878 /* GPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC186E611A9D906F00A87878 /* GPX.swift */; };
 		EC3417FC1A9EA9C100930CE8 /* MKGPX.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3417FB1A9EA9C100930CE8 /* MKGPX.swift */; };
 		EC3417FE1A9EAE9600930CE8 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3417FD1A9EAE9600930CE8 /* ImageViewController.swift */; };
@@ -50,6 +52,8 @@
 		205AF52D1CDDC381009858B5 /* OurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OurViewController.swift; sourceTree = "<group>"; };
 		205AF5311CDEC46B009858B5 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		205AF5331CDEC4CA009858B5 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		20FF2F121CEAD67B007647B6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		20FF2F141CEADA31007647B6 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EC186E611A9D906F00A87878 /* GPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPX.swift; sourceTree = "<group>"; };
 		EC3417FB1A9EA9C100930CE8 /* MKGPX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKGPX.swift; sourceTree = "<group>"; };
 		EC3417FD1A9EAE9600930CE8 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FF2F131CEAD67B007647B6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +104,7 @@
 		EC3CECA41A9C02BB009D441D = {
 			isa = PBXGroup;
 			children = (
+				20FF2F121CEAD67B007647B6 /* MapKit.framework */,
 				EC3CECAF1A9C02BB009D441D /* Trax */,
 				EC3CECC51A9C02BC009D441D /* TraxTests */,
 				EC3CECAE1A9C02BB009D441D /* Products */,
@@ -119,6 +125,7 @@
 			children = (
 				205AF5241CDDB166009858B5 /* SWRevealViewController */,
 				EC3CECB41A9C02BC009D441D /* GPXViewController.swift */,
+				20FF2F141CEADA31007647B6 /* LocationManager.swift */,
 				203F01861CE06FDE00243B72 /* RegisterPageViewController.swift */,
 				EC4026AB1AA53C7400BE3924 /* EditWaypointViewController.swift */,
 				EC3417FB1A9EA9C100930CE8 /* MKGPX.swift */,
@@ -274,6 +281,7 @@
 				205AF52C1CDDC1B2009858B5 /* OurTableViewController.swift in Sources */,
 				EC3CECB51A9C02BC009D441D /* GPXViewController.swift in Sources */,
 				EC491D531AA7E80D00C13335 /* WaypointImageViewController.swift in Sources */,
+				20FF2F151CEADA31007647B6 /* LocationManager.swift in Sources */,
 				EC3CECB31A9C02BC009D441D /* AppDelegate.swift in Sources */,
 				EC4026AC1AA53C7400BE3924 /* EditWaypointViewController.swift in Sources */,
 				EC186E651A9D906F00A87878 /* GPX.swift in Sources */,

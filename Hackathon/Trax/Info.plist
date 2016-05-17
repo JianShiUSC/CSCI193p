@@ -61,6 +61,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>To update the map.</string>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

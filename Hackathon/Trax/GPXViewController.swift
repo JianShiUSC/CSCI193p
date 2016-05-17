@@ -9,13 +9,20 @@
 import UIKit
 import MapKit
 
-class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentationControllerDelegate
+class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentationControllerDelegate, CLLocationManagerDelegate
 {
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    var coreLocationManager = CLLocationManager()
+    var locationManager:LocationManager!
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     // MARK: - Outlets
 
+    @IBAction func updateLocation(sender: AnyObject) {
+        getLocation()
+    }
+    
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
             mapView.mapType = .Standard
@@ -170,6 +177,33 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /***********************************************/
+        
+        coreLocationManager.delegate = self
+        
+        locationManager = LocationManager.sharedInstance
+        
+        let authorizationCode = CLLocationManager.authorizationStatus()
+        
+        if authorizationCode == CLAuthorizationStatus.NotDetermined && coreLocationManager.respondsToSelector("requestAlwaysAuthorization") || coreLocationManager.respondsToSelector("requestWhenInUseAuthorization")
+        {
+            if NSBundle.mainBundle().objectForInfoDictionaryKey("NSLocationAlwaysUsageDescription") != nil
+            {
+                coreLocationManager.requestAlwaysAuthorization()
+            }
+            else
+            {
+                print("No description provided")
+            }
+        }
+        else
+        {
+            getLocation()
+        }
+        
+        /***********************************************/
+
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -190,7 +224,36 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             }
         }
 
-        gpxURL = NSURL(string: "http://www.shijianloveslareine.com/Vacation.gpx") // for demo/debug/testing
+        //gpxURL = NSURL(string: "http://www.shijianloveslareine.com/Vacation.gpx") // for demo/debug/testing
+    }
+    
+    func getLocation()
+    {
+        locationManager.startUpdatingLocationWithCompletionHandler { (latitude, longitude, status, verboseMessage, error) -> () in
+            self.displayLocation(CLLocation(latitude: latitude, longitude: longitude))
+        }
+    }
+    
+    func displayLocation(location: CLLocation)
+    {
+        mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude), span: MKCoordinateSpanMake(0.05, 0.05)), animated: true)
+        
+        let locationPinCoord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locationPinCoord
+        
+        mapView.addAnnotation(annotation)
+        mapView.showAnnotations([annotation], animated: true)
+        
+        locationManager.reverseGeocodeLocationWithCoordinates(location, onReverseGeocodingCompletionHandler: { (reverseGecodeInfo, placemark, error) -> Void in
+            print(reverseGecodeInfo)
+        })
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status != CLAuthorizationStatus.NotDetermined || status != CLAuthorizationStatus.Denied || status != CLAuthorizationStatus.Restricted {
+            getLocation()
+        }
     }
 
     // MARK: - Constants
