@@ -70,6 +70,10 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     // MARK: - MKMapViewDelegate
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation.isKindOfClass(MKUserLocation) {
+            return nil
+        }
+        
         var view = mapView.dequeueReusableAnnotationViewWithIdentifier(Constants.AnnotationViewReuseIdentifier)
         
         if view == nil {
@@ -177,14 +181,9 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /***********************************************/
-        
         coreLocationManager.delegate = self
-        
         locationManager = LocationManager.sharedInstance
-        
         let authorizationCode = CLLocationManager.authorizationStatus()
-        
         if authorizationCode == CLAuthorizationStatus.NotDetermined && coreLocationManager.respondsToSelector("requestAlwaysAuthorization") || coreLocationManager.respondsToSelector("requestWhenInUseAuthorization")
         {
             if NSBundle.mainBundle().objectForInfoDictionaryKey("NSLocationAlwaysUsageDescription") != nil
@@ -201,8 +200,6 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             getLocation()
         }
         
-        /***********************************************/
-
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -224,7 +221,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             }
         }
 
-        //gpxURL = NSURL(string: "http://www.shijianloveslareine.com/Vacation.gpx") // for demo/debug/testing
+//        gpxURL = NSURL(string: "http://www.shijianloveslareine.com/Vacation.gpx") // for demo/debug/testing
     }
     
     func getLocation()
@@ -242,11 +239,13 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         let annotation = MKPointAnnotation()
         annotation.coordinate = locationPinCoord
         
-        mapView.addAnnotation(annotation)
-        mapView.showAnnotations([annotation], animated: true)
+//        mapView.addAnnotation(annotation)
+//        mapView.showAnnotations([annotation], animated: true)
         
         locationManager.reverseGeocodeLocationWithCoordinates(location, onReverseGeocodingCompletionHandler: { (reverseGecodeInfo, placemark, error) -> Void in
-            print(reverseGecodeInfo)
+//            print(reverseGecodeInfo)
+//            let address = reverseGecodeInfo?.objectForKey("formattedAddress") as! String
+//            self.locationInfo.text = address
         })
     }
     
