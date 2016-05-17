@@ -11,6 +11,7 @@ import MapKit
 
 class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentationControllerDelegate, CLLocationManagerDelegate
 {
+    var resultSearchController:UISearchController? = nil
     
     var coreLocationManager = CLLocationManager()
     var locationManager:LocationManager!
@@ -199,6 +200,18 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         {
             getLocation()
         }
+        
+        
+        let locationSearchTable = storyboard!.instantiateViewControllerWithIdentifier("LocationSearchTable") as! LocationSearchTable
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
         
         
         if self.revealViewController() != nil {
