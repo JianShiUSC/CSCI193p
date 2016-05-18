@@ -9,8 +9,14 @@
 import UIKit
 import MapKit
 
+protocol HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark)
+}
+
 class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentationControllerDelegate, CLLocationManagerDelegate
 {
+    var selectedPin:MKPlacemark? = nil
+    
     var resultSearchController:UISearchController? = nil
     
     var coreLocationManager = CLLocationManager()
@@ -70,35 +76,35 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
     
     // MARK: - MKMapViewDelegate
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation.isKindOfClass(MKUserLocation) {
-            return nil
-        }
-        
-        var view = mapView.dequeueReusableAnnotationViewWithIdentifier(Constants.AnnotationViewReuseIdentifier)
-        
-        if view == nil {
-            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: Constants.AnnotationViewReuseIdentifier)
-            view!.canShowCallout = true
-        } else {
-            view!.annotation = annotation
-        }
-        
-        view!.draggable = annotation is EditableWaypoint
-        
-        view!.leftCalloutAccessoryView = nil
-        view!.rightCalloutAccessoryView = nil
-        if let waypoint = annotation as? GPX.Waypoint {
-            if waypoint.thumbnailURL != nil {
-                view!.leftCalloutAccessoryView = UIButton(frame: Constants.LeftCalloutFrame)
-            }
-            if annotation is EditableWaypoint {
-                view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
-            }
-        }
-        
-        return view
-    }
+//    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+//        if annotation.isKindOfClass(MKUserLocation) {
+//            return nil
+//        }
+//        
+//        var view = mapView.dequeueReusableAnnotationViewWithIdentifier(Constants.AnnotationViewReuseIdentifier)
+//        
+//        if view == nil {
+//            view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: Constants.AnnotationViewReuseIdentifier)
+//            view!.canShowCallout = true
+//        } else {
+//            view!.annotation = annotation
+//        }
+//        
+//        view!.draggable = annotation is EditableWaypoint
+//        
+//        view!.leftCalloutAccessoryView = nil
+//        view!.rightCalloutAccessoryView = nil
+//        if let waypoint = annotation as? GPX.Waypoint {
+//            if waypoint.thumbnailURL != nil {
+//                view!.leftCalloutAccessoryView = UIButton(frame: Constants.LeftCalloutFrame)
+//            }
+//            if annotation is EditableWaypoint {
+//                view!.rightCalloutAccessoryView = UIButton(type: UIButtonType.DetailDisclosure)
+//            }
+//        }
+//        
+//        return view
+//    }
     
     // this had to be adjusted slightly when we added editable waypoints
     // we can no longer depend on the thumbnailURL being set at "annotation view creation time"
@@ -212,7 +218,8 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         resultSearchController?.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
-        
+        locationSearchTable.mapView = mapView
+        locationSearchTable.handleMapSearchDelegate = self
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -235,6 +242,14 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         }
 
         gpxURL = NSURL(string: "http://www.shijianloveslareine.com/Vacation.gpx") // for demo/debug/testing
+    }
+    
+    func getDirections(){
+        if let selectedPin = selectedPin {
+            let mapItem = MKMapItem(placemark: selectedPin)
+            let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+            mapItem.openInMapsWithLaunchOptions(launchOptions)
+        }
     }
     
     func getLocation()
@@ -297,5 +312,49 @@ extension MKAnnotationView {
         popoverSourceRectCenter.x -= frame.width / 2 - centerOffset.x - calloutOffset.x
         popoverSourceRectCenter.y -= frame.height / 2 - centerOffset.y - calloutOffset.y
         return CGRect(origin: popoverSourceRectCenter, size: frame.size)
+    }
+}
+
+extension GPXViewController: HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark){
+        // cache the pin
+        selectedPin = placemark
+        // clear existing pins
+        mapView.removeAnnotations(mapView.annotations)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placemark.coordinate
+        annotation.title = placemark.name
+        if let city = placemark.locality,
+            let state = placemark.administrativeArea {
+            annotation.subtitle = "\(city) \(state)"
+        }
+        mapView.addAnnotation(annotation)
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let region = MKCoordinateRegionMake(placemark.coordinate, span)
+        mapView.setRegion(region, animated: true)
+    }
+}
+
+extension GPXViewController {
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?{
+        if annotation is MKUserLocation {
+            //return nil so map view draws "blue dot" for standard user location
+            return nil
+        }
+        let reuseId = "pin"
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+        if #available(iOS 9.0, *) {
+            pinView?.pinTintColor = UIColor.orangeColor()
+        } else {
+            // Fallback on earlier versions
+        }
+        pinView?.canShowCallout = true
+        let smallSquare = CGSize(width: 30, height: 30)
+        let button = UIButton(frame: CGRect(origin: CGPointZero, size: smallSquare))
+        button.setBackgroundImage(UIImage(named: "car"), forState: .Normal)
+        button.addTarget(self, action: "getDirections", forControlEvents: .TouchUpInside)
+        pinView?.leftCalloutAccessoryView = button
+        return pinView
     }
 }
