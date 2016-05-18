@@ -191,7 +191,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         coreLocationManager.delegate = self
         locationManager = LocationManager.sharedInstance
         let authorizationCode = CLLocationManager.authorizationStatus()
-        if authorizationCode == CLAuthorizationStatus.NotDetermined && coreLocationManager.respondsToSelector("requestAlwaysAuthorization") || coreLocationManager.respondsToSelector("requestWhenInUseAuthorization")
+        if authorizationCode == CLAuthorizationStatus.NotDetermined && coreLocationManager.respondsToSelector(#selector(CLLocationManager.requestAlwaysAuthorization)) || coreLocationManager.respondsToSelector(#selector(CLLocationManager.requestWhenInUseAuthorization))
         {
             if NSBundle.mainBundle().objectForInfoDictionaryKey("NSLocationAlwaysUsageDescription") != nil
             {
@@ -223,7 +223,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
@@ -353,7 +353,7 @@ extension GPXViewController {
         let smallSquare = CGSize(width: 30, height: 30)
         let button = UIButton(frame: CGRect(origin: CGPointZero, size: smallSquare))
         button.setBackgroundImage(UIImage(named: "car"), forState: .Normal)
-        button.addTarget(self, action: "getDirections", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(GPXViewController.getDirections), forControlEvents: .TouchUpInside)
         pinView?.leftCalloutAccessoryView = button
         return pinView
     }
