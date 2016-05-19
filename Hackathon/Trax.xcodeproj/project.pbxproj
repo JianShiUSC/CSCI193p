@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		203F01851CE0534D00243B72 /* ProtectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F01841CE0534D00243B72 /* ProtectedViewController.swift */; };
 		203F01871CE06FDE00243B72 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F01861CE06FDE00243B72 /* RegisterPageViewController.swift */; };
+		203F3AA31CED820000D744F1 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203F3AA21CED820000D744F1 /* EditProfileViewController.swift */; };
 		205AF5231CDDACFD009858B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AF5221CDDACFD009858B5 /* LoginViewController.swift */; };
 		205AF5281CDDB1CE009858B5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AF5271CDDB1CE009858B5 /* SWRevealViewController.m */; };
 		205AF52C1CDDC1B2009858B5 /* OurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205AF52B1CDDC1B2009858B5 /* OurTableViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		203F01841CE0534D00243B72 /* ProtectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtectedViewController.swift; sourceTree = "<group>"; };
 		203F01861CE06FDE00243B72 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		203F3AA21CED820000D744F1 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		205AF5221CDDACFD009858B5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		205AF5251CDDB1CD009858B5 /* Trax-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Trax-Bridging-Header.h"; sourceTree = "<group>"; };
 		205AF5261CDDB1CE009858B5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				205AF5221CDDACFD009858B5 /* LoginViewController.swift */,
 				EC491D521AA7E80D00C13335 /* WaypointImageViewController.swift */,
 				EC491D541AA7E93C00C13335 /* SimpleMapViewController.swift */,
+				203F3AA21CED820000D744F1 /* EditProfileViewController.swift */,
 				EC3CECB11A9C02BC009D441D /* Info.plist */,
 				EC3CECB01A9C02BC009D441D /* Supporting Files */,
 			);
@@ -288,6 +291,7 @@
 				EC3CECB31A9C02BC009D441D /* AppDelegate.swift in Sources */,
 				EC4026AC1AA53C7400BE3924 /* EditWaypointViewController.swift in Sources */,
 				EC186E651A9D906F00A87878 /* GPX.swift in Sources */,
+				203F3AA31CED820000D744F1 /* EditProfileViewController.swift in Sources */,
 				EC3417FE1A9EAE9600930CE8 /* ImageViewController.swift in Sources */,
 				205AF5281CDDB1CE009858B5 /* SWRevealViewController.m in Sources */,
 				203F01851CE0534D00243B72 /* ProtectedViewController.swift in Sources */,

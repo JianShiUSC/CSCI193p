@@ -265,8 +265,27 @@
                         <sections>
                             <tableViewSection id="yJD-Yc-9If">
                                 <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="VZw-El-7L8">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VZw-El-7L8" id="aOQ-mE-dSz">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="95.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zo-0S-fif">
+                                                    <rect key="frame" x="8" y="8" width="75" height="75"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWh-37-NFi">
+                                                    <rect key="frame" x="136" y="37" width="119" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rqW-O3-SSn">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="96" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rqW-O3-SSn" id="kuq-Y2-uRE">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -291,7 +310,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xg4-jN-HD6">
-                                        <rect key="frame" x="0.0" y="44" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="140" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xg4-jN-HD6" id="IQj-pj-02R">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -316,7 +335,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Yoe-Sz-wIC">
-                                        <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="184" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yoe-Sz-wIC" id="oOi-3x-d1W">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -341,7 +360,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L4d-9E-Vf6">
-                                        <rect key="frame" x="0.0" y="132" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="228" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L4d-9E-Vf6" id="jcL-De-ZQp">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -361,6 +380,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="hHH-S5-13A" secondAttribute="trailing" id="ziD-Ed-Lvl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="540-1w-E9P" kind="presentation" id="eee-uw-dal"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -665,7 +687,7 @@
         <!--Edit profile-->
         <scene sceneID="PbR-cf-uSI">
             <objects>
-                <viewController id="8N4-sk-ZLg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileViewController" id="8N4-sk-ZLg" customClass="EditProfileViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wf4-YT-11g"/>
                         <viewControllerLayoutGuide type="bottom" id="Kzh-vp-QAK"/>
@@ -681,6 +703,9 @@
                                 <rect key="frame" x="113" y="100" width="158" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Change profile picture"/>
+                                <connections>
+                                    <action selector="chooseProfileButtonTapped:" destination="8N4-sk-ZLg" eventType="touchUpInside" id="Y9S-ky-C13"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name:" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="bOA-AT-G1j">
                                 <rect key="frame" x="20" y="165" width="335" height="30"/>
@@ -707,17 +732,31 @@
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="8N4-sk-ZLg" eventType="touchUpInside" id="WY3-5H-VGV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit profile" id="WxT-2l-Z67">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="Vjh-qn-H1u"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Vjh-qn-H1u">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="8N4-sk-ZLg" id="8us-A5-B8T"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="firstNameTextField" destination="bOA-AT-G1j" id="dvh-Nc-iVB"/>
+                        <outlet property="lastNameTextField" destination="QCO-jI-bmo" id="MlB-RA-p7k"/>
+                        <outlet property="passwordRepeatTextField" destination="0WA-dX-Ft7" id="YbN-jR-AcY"/>
+                        <outlet property="passwordTextField" destination="U1s-cQ-n0Z" id="uMi-LU-nLy"/>
+                        <outlet property="profilePictureImageView" destination="mwt-zk-ejx" id="LQQ-wx-cDh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGx-HK-9vV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3210.5" y="835.5"/>
+            <point key="canvasLocation" x="808.5" y="89.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nlh-bi-8KE">
@@ -824,7 +863,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzL-mm-mhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2399" y="836"/>
+            <point key="canvasLocation" x="342.5" y="89.5"/>
         </scene>
     </scenes>
     <resources>
