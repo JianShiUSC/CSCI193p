@@ -61,7 +61,7 @@ class EditProfileViewController: UIViewController {
         let request = NSMutableURLRequest(URL: myUrl!)
         request.HTTPMethod = "POST"
         
-        let postString = "firstName=\(firstName)&lastName=\(lastName)"
+        let postString = "firstName=\(firstName!)&lastName=\(lastName!)"
         
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
