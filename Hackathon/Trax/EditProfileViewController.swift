@@ -19,13 +19,44 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let myUrl = NSURL(string: "http://www.shijianloveslareine.com/scripts/showUserName.php")
+        let request = NSMutableURLRequest(URL: myUrl!)
+        request.HTTPMethod = "POST"
+        
+        let postString = ""
+        
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request)
+        {
+            data, response, error in
 
-        // Do any additional setup after loading the view.
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            
+            do {
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
+                
+                if let parseJSON = json
+                {
+                    let fn = parseJSON["firstName"] as! String!
+                    let ln = parseJSON["lastName"] as! String!
+                    self.firstNameTextField.text = fn
+                    self.lastNameTextField.text = ln
+                }
+
+            } catch { print(error) }
+        }
+        task.resume()
+        
+//        firstNameTextField.text = "Jian"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func doneButtonTapped(sender: AnyObject) {
